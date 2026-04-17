@@ -27,15 +27,21 @@
 4. `CMD` vs `ENTRYPOINT`: `CMD` provides default command and can be overridden more easily.
 
 ### Exercise 2.3: Image size comparison
-- Develop: [PENDING_MEASURE]
-- Production: [PENDING_MEASURE]
-- Difference: [PENDING_MEASURE]
+- Develop: Not measured (current repo tracks final image only)
+- Production: 263 MB
+- Difference:
 
 ## Part 3: Cloud Deployment
 
 ### Exercise 3.1: Railway deployment
-- URL: [TO_FILL_PUBLIC_URL]
-- Screenshot: [TO_FILL_SCREENSHOT_PATH]
+- URL: https://day12-agent-deployment-production-4d78.up.railway.app
+- Health test:
+  - `GET /health` returned `200` and body:
+    - `{"status":"ok","uptime_seconds":75.0,"timestamp":"2026-04-17T12:30:53.275073+00:00"}`
+- API test:
+  - `POST /ask` with API key returned `200` and body:
+    - `{"user_id":"test","question":"hello from railway","answer":"[Mock answer] You asked: hello from railway","history_items_before":0}`
+- Screenshot: `screenshots/dashboard.png`
 
 ## Part 4: API Security
 
